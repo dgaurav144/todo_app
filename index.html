@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toddo app</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="loader"></div>
+    <main id="asli">
+    <div id="main">
+        <h1>TODO APP</h1>
+    
+    <input  type="text" placeholder="Enter a todo" id="input">
+    
+    
+    
+    <p id="text"></p>
+    </div>
+    <p class="me">Double click to remove a todo AND right click to &sext; STAR a todo and remove other todo  &sext; In moblie Press and hold !</p>
+    
+    </main>
+    <script>
+        var todo = document.getElementById("input")
+    
+        var text = document.getElementById("text")
+        var loader = document.getElementById("loader")
+        var main = document.getElementById("main")
+        setTimeout(()=>{
+            loader.style.display = "none"
+            asli.style.display = "block"
+            main.style.display="flex"
+            
+        },3000);
+      
+        todo.addEventListener("keyup", (e)=>{
+            console.log(e.key)
+            if(e.key== "Enter"){
+                var add =   document.createElement("li");
+          
+          add.innerHTML = input.value;
+          text.appendChild(add);
+          
+
+            }
+         if(input.value== ""){
+            alert("ENTER A  VALUE")
+         }
+
+
+         else{
+            add.addEventListener("dblclick" , ()=>{
+                add.remove()
+                
+            })
+           
+         
+         }
+         
+        })
+    
+            text.addEventListener("contextmenu" , ()=>{
+                
+                text.innerHTML= `${input.value}  &sext; `
+              
+                
+            })
+        
+       
+            
+            
+        
+
+    </script>
+</body>
+</html>
